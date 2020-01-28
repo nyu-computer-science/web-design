@@ -1,0 +1,299 @@
+---
+layout: presentation
+title: Web Architecture
+permalink: /web-architecture/
+---
+
+class: center, middle
+
+# Web Architecture
+how the pieces fit together
+
+---
+
+# Agenda
+
+1. [The Internet](#internet)
+2. [The World Wide Web](#web)
+3. [Clients and Servers](#client-server)
+4. [Hypertext Transfer Protocol](#http)
+5. [Front-end technologies](#front-end)
+6. [Back-end technologies](#back-end)
+7. [Databases](#databases)
+8. [Conclusions](#conclusions)
+
+---
+
+name: internet
+
+# The Internet
+
+---
+
+template: internet
+name: internet-1
+
+## Definition
+The Internet is the global interconnected network of computers that communicate via a set of standardized protocols.
+
+---
+
+template: internet-1
+name: internet-2
+
+- It is sometimes referred to as a "network of networks."
+
+---
+
+template: internet
+name: internet-3
+
+## Connective tissue
+The vast expanses of the Internet's reach are today enabled primarily by fiber optic cables that run locally, regionally, and across ocean floors to connect continents.
+
+Copper wires and radio signals account for a smaller fraction of the total distance traveled by data on the Internet.
+
+---
+
+template: internet
+name: internet-4
+
+## Origins
+The Internet evolved over decades, funded primarily by the US Department of Defense
+- US Department of Defense networking projects in the 1960s explored fault-tolerant networks resistent to nuclear attack
+- The ARPANET, a mostly regional network in the 1970s-80s, attempted to improve interoperability among different computer systems
+- transitioned to the Internet in 1980s-90s, a global network of interoperable computers
+
+---
+
+template: internet
+name: internet-4
+
+## Ownership
+The "backbone" of networking equipment "that fuels the Internet belongs to a patchwork of different interests:
+- telecommunications companies and other private corporations
+- federal, state, and local government
+- academia
+- military
+
+Most organizations providing key parts of the internet backbone abide by a "free peering" agreement, whereby they agree to relay eaach others' data across their own network hardware for free.
+
+---
+
+template: internet
+name: internet-5
+
+## Control
+The Internet, where anyone anywhere can share information, steal information, surveil and influence populations on the other side of the globe, is increasingly the site of a struggle for information dominance.
+
+---
+
+template: internet-5
+name: internet-6
+
+- A decade or two ago, many saw the Internet as a democratizing force for peoples everywhere.
+
+---
+
+template: internet-5
+name: internet-6
+
+- Today, some predict a future of multiple Internets run by competing nation states.
+
+---
+
+name: web
+
+# The World Wide Web
+
+---
+
+template: web
+name: web-1
+
+## Definition
+The World Wide Web is one use of the Internet to publish and browse hypertext documents.
+
+---
+
+template: web
+name: web-2
+
+## Hypertext
+- "hypertext" means documents which reference and link to one-another.
+
+---
+
+template: web-2
+name: web-3
+
+- The hypertext concept was first popularized by Dr. Vannevar Bush in a 1945 article in The Atlantic titled, "[As We May Think](https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/)".
+
+---
+
+template: web-3
+name: web-4
+
+- Vannevar Bush was then the Director of the Office of Scientific Research and Development for the US military.
+
+---
+
+template: web-4
+name: web-5
+
+- After World War II, where he managed miliatry scientific research including the development of the atomic bomb, Bush turned his sights to the problem of information overload.
+
+---
+
+template: web
+name: web-6
+
+## Origin
+- The World Wide Web was invented in 1989-1990 by a British researcher at CERN named Tim Berners-Lee.
+
+---
+
+template: web-6
+name: web-7
+
+- Berners-Lee acknowledged that his invention was really a mashup of existing concepts, including hypertext, the Internet, and multi-font text.
+
+---
+
+template: web-7
+name: web-8
+
+- Inventing The Web required him to think at a higher level of abstraction and generalization to envision the value of this combination.
+
+---
+
+template: web-8
+name: web-9
+
+- He then invented Hypertext Markup Language (HTML), and created the first web browser, the first web server, and invented the Hypertext Transfer Protocol (HTTP) that allows web browsers and web servers to communicate with a specific set of commands.
+
+---
+
+name: clients-servers
+
+# Clients and servers
+
+---
+
+template: clients-servers
+name: clients-servers-1
+
+## Definitions
+- a **client** is any machine on a network that is requesting data from a *server*.
+
+---
+
+template: clients-servers-1
+name: clients-servers-2
+
+- a **server** is any machine that is responding to a request for data from a *client* machine.
+
+---
+
+template: clients-servers-2
+name: clients-servers-3
+
+- a single machine may sometimes act as a client in one interaction and a server in another.
+
+---
+
+name: http
+
+# Hypertext Transfer Protocol
+
+---
+
+template: http
+name: http-1
+
+## Standardized requests and responses
+The HTTP specification indicates 
+- how Web clients can make requests to Web servers
+- how Web servers can respond to those requests from Web clients
+
+---
+
+template: http
+name: http-2
+
+## Plain text
+- HTTP request and response commands are sent as plain text over the network, following a specific format.
+- for added security, the **HTTPS** "secure" extension of HTTP encrypts the request and response communication while in transit
+
+---
+
+template: http
+name: http-3
+
+## Request types
+The two most widely used [request types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) allowed by the HTTP specification
+- **GET** - a web client requests that the web server respond by giving it a specific information resource, such as a web page
+- **POST** - a web client supplies some data to the web server along with the request with the intention that the server save that data, or at least use it to changee its behavior in some way
+
+---
+
+template: http
+name: http-4
+
+## Response codes
+Web server responses include a [status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), indicating the status of the client's request.
+- **200** to **299**: success
+- **400** to **499**: client error
+- **500** to **599**: server error
+- and more...
+
+---
+
+template: http
+name: http-5
+
+## Example of a web client GET request
+```http
+GET /Web_Design_Schedule HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: knowledge.kitchen
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+```
+
+---
+
+template: http
+name: http-5
+
+## Example of a successsful web server response
+```http
+HTTP/1.1 200 OK
+Date: Mon, 27 Jul 2022 12:28:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+Content-Length: 88
+Content-Type: text/html
+Connection: Closed
+
+<html>
+    <body>
+    <h1>Hello, World!</h1>
+    </body>
+</html>
+```
+
+---
+
+name: conclusions
+
+# Conclusions
+
+---
+
+template: conclusions
+name: conclusions-1
+
+- Thank you.  Bye
+
