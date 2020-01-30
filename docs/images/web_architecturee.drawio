@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-01-30T20:57:18.329Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="Yj5SDjVhvYV24sPcZ3ig" version="12.6.2" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2020-01-30T21:01:31.623Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="ZyypFR9FxINI62ahc67f" version="12.6.2" type="github" pages="3">
   <diagram id="oCbhM_8GZ6fLKpog-9ED" name="Client-server">
     <mxGraphModel dx="881" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#000000" math="0" shadow="0">
       <root>
@@ -161,8 +161,8 @@
         <mxCell id="MEbhs_oPwxrEuZzM5ytz-11" value="database" style="text;html=1;fontColor=#FFFFFF;align=center;" vertex="1" parent="MEbhs_oPwxrEuZzM5ytz-1">
           <mxGeometry x="472.78" y="172" width="60" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="x2kc0yfn_sEXH8Rfcy8S-0" value="&lt;font color=&quot;#ffffff&quot;&gt;Servers typically store data in databases and use that data to influence their responses to the client.&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEbhs_oPwxrEuZzM5ytz-1">
-          <mxGeometry x="332.78" y="200" width="200" height="80" as="geometry"/>
+        <mxCell id="x2kc0yfn_sEXH8Rfcy8S-0" value="&lt;font color=&quot;#ffffff&quot;&gt;Servers typically store data in databases and use that data to influence their responses to the client.&amp;nbsp; This data can persist even after the client disconnects.&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;Oracle,&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;MS SQL, MongoDB, MySQL, Firebase, Amazon, etc&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEbhs_oPwxrEuZzM5ytz-1">
+          <mxGeometry x="332.78" y="220" width="200" height="80" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
