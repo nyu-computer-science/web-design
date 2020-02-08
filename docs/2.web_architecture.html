@@ -16,12 +16,13 @@ how the pieces fit together
 1. [The Internet](#internet)
 2. [The World Wide Web](#web)
 3. [Clients and Servers](#client-server)
-4. [Hypertext Transfer Protocol](#http)
-5. [Front-End Technologies](#front-end)
-6. [Back-End Technologies](#back-end)
-7. [Databases](#databases)
-7. [Monolithic vs Microservices Architectures](#microservices)
-8. [Conclusions](#conclusions)
+4. [Layered Architecture](#layered-architecture)
+5. [Hypertext Transfer Protocol](#http)
+6. [Front-End Technologies](#front-end)
+7. [Back-End Technologies](#back-end)
+8. [Databases](#databases)
+9. [Monolithic vs Microservices Architectures](#microservices)
+10. [Conclusions](#conclusions)
 
 ---
 
@@ -100,7 +101,7 @@ The Internet, for better or worse, has been much touted as a disruptive force in
 template: internet-6
 name: internet-7
 
-- A decade or two ago, many saw the Internet as a [democratizing force](https://blogs.harvard.edu/idblog/2008/05/14/the-democratic-power-shift-on-the-internet/) for peoples everywhere.
+- A decade or two ago, many saw the Internet as a [democratizing force](https://blogs.harvard.edu/idblog/2008/05/14/the-democratic-power-shift-on-the-internet/) for oppressed peoples everywhere.
 
 ---
 
@@ -318,6 +319,62 @@ A single server typically handles requests from many clients.
 
 ---
 
+template: clients-servers
+name: clients-servers-9
+
+In peer-to-peer networks, such as [BitTorrent](https://en.wikipedia.org/wiki/BitTorrent), any machines on the network may simultaneously act as a client in one exchange while playing the role of a server in another.
+
+![Peer-to-peer networks](../images/client_server_peer_to_peer.png)
+
+---
+
+name: layered-architecture
+
+# Layered Architecture
+
+---
+
+template: layered-architecture
+name: layered-architecture-1
+
+## Overview
+- communication between clients and servers (or among peers) over the Internet is standardized
+
+---
+
+template: layered-architecture-1
+name: layered-architecture-2
+
+- a set of Internet Protocols control the languages used in these interactions
+
+---
+
+template: layered-architecture-2
+name: layered-architecture-3
+
+- these protocols are designed in a **layered architecture**, where protocols in each layer depend and upon the protocols in the layer directly below it.
+
+---
+
+template: layered-architecture
+name: layered-architecture-4
+
+## Diagram of layers
+
+![The Internet's layered architecture](../images/internet_layered_architecture.png)
+
+---
+
+template: layered-architecture-4
+name: layered-architecture-5
+
+- **HTTP** is concerned with properly generating requests and responses and sending them via TCP
+- **TCP** is used to ensure successful transmmission of request/response data from one computer to another using IP
+- **IP** makes sure data packets are packaged and addressed correctly
+- **Various networking protocols** are then used to pass the data along local and regional networks
+
+---
+
 name: http
 
 # Hypertext Transfer Protocol
@@ -349,19 +406,25 @@ name: http-3
 ## Request types
 The two most widely used [request types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) allowed by the HTTP specification
 - **GET** - a web client requests that the web server respond by giving it a specific information resource, such as a web page
-- **POST** - a web client supplies some data to the web server along with the request with the intention that the server save that data, or at least use it to changee its behavior in some way
 
 ---
 
 template: http-3
 name: http-4
 
+- **POST** - a web client supplies some data to the web server along with the request with the intention that the server save that data, or at least use it to changee its behavior in some way
+
+---
+
+template: http-4
+name: http-5
+
 - other HTTP request types do exist, but are less widely used.
 
 ---
 
 template: http
-name: http-5
+name: http-6
 
 ## Response codes
 Web server responses include a [status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), indicating the success or failure of the client's request.
@@ -373,7 +436,7 @@ Web server responses include a [status code](https://developer.mozilla.org/en-US
 ---
 
 template: http
-name: http-6
+name: http-7
 
 ## Example of a web client GET request
 ```http
@@ -387,7 +450,7 @@ Accept-Encoding: gzip, deflate
 ---
 
 template: http
-name: http-7
+name: http-8
 
 ## Example of a web client POST request
 ```http
@@ -405,7 +468,7 @@ name=Foo+Barstein&topic=web+architecture
 ---
 
 template: http
-name: http-7
+name: http-9
 
 ## Example of a successsful web server response
 ```http
@@ -459,6 +522,15 @@ name: front-end-3
 ## HTML
 Used to indicate the content and semantic *meaning* of the content on a web page.
 
+```html
+<article>
+    <h1>Jaberwocky</h1>
+    <p id="p1">Twas brillig and the slithy toves did gyre and gimble in the wabe:</p>
+    <a id="more" href="#">click to see more</p>
+    <p id="p2">All mimsy were the borogoves, and the mome raths outgrabe.</p>
+</article>
+```
+
 ---
 
 template: front-end
@@ -467,6 +539,18 @@ name: front-end-4
 ## CSS
 Used to indicate the style and presentation of a web page.
 
+```css
+/* styles for the second paragraph */
+#p2 {
+    display: none; /* hide the second stanza by default */
+}
+
+/* styles for the link */
+#more {
+    color: red; /* make the text red */
+    text-decoration: none; /* remove the default underline from the link */
+}
+```
 ---
 
 template: front-end
@@ -474,6 +558,13 @@ name: front-end-5
 
 ## Javascript
 Used to indicate interaative behaviors of a web page.
+
+```javascript
+// when the link is clicked...
+$('#more').click(function() {
+    $('#p2').show(); // make the second stanza appear
+});
+```
 
 ---
 
