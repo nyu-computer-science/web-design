@@ -91,7 +91,7 @@ Let's start with the first line, the `doctype`.
 ```
 
 - This informs the web browser that this is an HTML version 5 document.
-- Other versions of HTML have other `doctype` strings.
+- Other versions of HTML have [other `doctype` strings](https://www.w3schools.com/tags/tag_doctype.asp).
 - The browsers are programamed by their creators to understand these strings.
 
 ---
@@ -101,7 +101,7 @@ name: minimum-3
 
 ## html
 
-Moving on, we see the `html` tag the beginning and end.
+Moving on, we see the `html` tags the beginning and the end.
 
 ```html
     <html>
@@ -110,7 +110,8 @@ Moving on, we see the `html` tag the beginning and end.
 ```
 
 - All HTML code (except the `doctype`, which is technically not HTML) is surrounded by these beginning and ending `html` tags.
-- The browser now knows that what comes between is HTML code.
+- Putting tags within other tags is called **nesting** tags - like [Matryoshka dolls](https://en.wikipedia.org/wiki/Matryoshka_doll#/media/File:Floral_matryoshka_set_2_smallest_doll_nested.JPG).
+- The browser now knows that what is nested within the `html` tags will be HTML code.
 
 ---
 
@@ -128,6 +129,7 @@ Within the `html` element, indented one level further in, we see two sets of tag
         <body>
             ...
         </body>
+```
 
 - The only two elements to be *nested* directly within the `html` element are these two: `head` and `body`.
 - All other HTML elements go further nested within one of these two.
