@@ -1,0 +1,371 @@
+---
+layout: presentation
+title: Intro to HTML
+permalink: /html/
+---
+
+class: center, middle
+
+# Intro to Hypertext Markup Language
+facilitating the control the content of web pages
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Separation of Concerns](#separation)
+1. [Bare Minimum Code](#minimum)
+1. [Elements & Tags](#elements)
+1. [Attributes](#attributes)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+---
+
+template: overview
+name: overview-1
+
+Hypertext Markup Language (HTML) is used to indicate the contents of a web page.
+- What images, text, videos, audio, or animations should be placed on the page
+- What is the *semantic* meaning of each piece of content, i.e. what is it describing?
+
+---
+
+name: separation
+
+# Separation of Concerns
+
+---
+
+template: separation
+name: separation-1
+
+The **separation of concerns** is a philosophy popular in technology that different tasks should be accomplished by different technologis.  With regards the Web:
+- The semantic content should be controlled by Hypertext Markup Language (HTML)
+- The visual presentation of content should be controlled by Cascading Style Sheets (CSS)
+- The interactive behavior of content should be controlled by Javascript
+
+---
+
+name: minimum
+
+# Bare Minimum HTML Code
+
+---
+
+template: minimum
+name: minimum-1
+
+At the very least, an HTML document contains the following code:
+
+```html
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Insert the title of your page here</title>
+        <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+    </head>
+    <body>
+        Insert the contents of your page here. 
+    </body>
+</html>
+```
+
+---
+
+template: minimum
+name: minimum-2
+
+## doctype
+Let's start with the first line, the `doctype`.
+
+```html
+<!doctype html>
+```
+
+- This informs the web browser that this is an HTML version 5 document.
+- Other versions of HTML have other `doctype` strings.
+- The browsers are programamed by their creators to understand these strings.
+
+---
+
+template: minimum
+name: minimum-3
+
+## html
+
+Moving on, we see the `html` tag the beginning and end.
+
+```html
+    <html>
+        ...
+    </html>
+```
+
+- All HTML code (except the `doctype`, which is technically not HTML) is surrounded by these beginning and ending `html` tags.
+- The browser now knows that what comes between is HTML code.
+
+---
+
+template: minimum
+name: minimum-4
+
+## head and body
+Within the `html` element, indented one level further in, we see two sets of tags: `head` and `body`.
+
+```html
+        <head>
+            ...
+        </head>
+
+        <body>
+            ...
+        </body>
+
+- The only two elements to be *nested* directly within the `html` element are these two: `head` and `body`.
+- All other HTML elements go further nested within one of these two.
+- The `head` will contain *metadata* about the page, and perhaps other invisible instructions to the web browser. 
+- The `body` willl contain the visible parts of the page - the things the end-user will see.
+
+---
+
+template: minimum
+name: minimum-5
+
+### meta charset
+The `meta` tag resides within the `head`. 
+- Notice that this is the first tag we have encountered that does not have a corresponding closing tag, such as `</meta>`.
+
+```html
+            <meta charset="utf-8" />
+```
+
+- This tag is metadata informing the web browser of the character set being used by the code on this page.
+- Different character sets can support different languages.
+- UTF-8 is a *Unicode*-based character set that supports all known written languages.
+- If the character set is not specified correctly, non-English characters may not render correctly when the page is loaded by the browser.
+
+---
+
+template: minimum
+name: minimum-6
+
+### title
+The `title` element is metadata indicating to the web browser the title of this document.
+- The `title` does not appear within the visible contents of the web page.
+- The `title` does appear usually in browser tabs and in search engines.
+
+```html
+            <title>Insert the title of your page here</title>
+```
+
+---
+
+template: minimum
+name: minimum-7
+
+### link
+The `link` element informs the web browser of the existence of another file it should load.
+- In this case, the `link` informs the browser that it should load a Cascading Style Sheets (CSS) file.
+
+```html
+            <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+```
+
+---
+
+template: minimum
+name: minimum-8
+
+### body contents
+The contents of the `body` tag indicate the visible elements of the page.
+- In this case, we simply specify some text to show on the page.
+- Much of our remaining discussion will focus on other tags we can nested within the `body`.
+
+```html
+        <body>
+            Insert the contents of your page here. 
+        </body>
+```
+
+---
+
+name: elements
+
+# Elements & Tags
+
+---
+
+template: elements
+name: elements-1
+
+## Elements
+An HTML *element* is a conceptual piece of content or metadata in the document. E.g.
+- the title of the document
+- an instruction to load a CSS document
+- an image
+- the main heading
+- sub-headings
+- a paragraph
+
+---
+
+template: elements
+name: elements-2
+
+## Tags
+Tags are the code that is written to inform the browser that you wish to create an element.
+- the `<title>...</title>` tags
+- the `<link />` tag
+- an `<img />` tag
+- the `<h1>...</h1>` tags
+- the `<h2>...</h2>` tags
+- `<p>...</p>` tags
+
+---
+
+template: elements
+name: elements-3
+
+## Tag pairs
+
+As a general rule, `tags` come in pairs - an opening and a closing `tag` together indicate the start and end of a conceptual `element`.  
+
+For example - an opening paragraph tag.
+```html
+<p>
+```
+
+And its corresponding closing - closing tags use the same *tag name* as the opening tag, e.g. `p`, but place a slash `/` in front of it.
+```html
+</p>
+```
+
+---
+
+template: elements
+name: elements-4
+
+## Self-closing tags
+
+Some opening tags do not have a separate closing tag.  These are *self-closing tags*.
+
+For example - the `link` opening tag.  There is no corresponding `</link>` closing tag.
+- This is because there is no need to ever put any other tags nested *inside* the `link` element.
+
+```html
+<link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+```
+
+Notice that it has a slash `/` within the opening tag itself at the end - this indicates that it is self-closing.
+- In HTML 5 (the latest version), this slash is not necessary, but optional.
+- In XHTML (the previous popular version still in use), it is necessary.
+- We will write our code in XHTML-compatible HTML 5... so **we will include the self-closing slash**.
+
+---
+
+template: elements
+name: elements-5
+
+## Tabs
+
+Line breaks, multiple spaces, and tabs are ignored by the web browser.
+- They are all interpreted as a single space character.
+
+So the following code is a valid HTML document:
+```html
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><title>Insert the title of your page here</title><link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
+```
+
+---
+
+template: elements
+name: elements-6
+
+## Tabs (continued)
+
+Don't do that!  We want to be able to read and understand code easily.
+- Use line breaks between elements.
+- If one element is nested within another, indent the nested element within its parent element.
+
+Do this:
+```html
+<article>
+    <img src="images/donkey.jpg" />
+</article>
+```
+
+Not this:
+```html
+<article>
+<img src="images/donkey.jpg" />
+</article>
+```
+
+Nor this:
+```html
+<article><img src="images/donkey.jpg" /></article>
+```
+
+---
+
+template: elements
+name: elements-7
+
+## Tabs (continued again)
+
+With elements that contain only text nested within them, it's okay to write that text on one line with the element's tags.
+
+```html
+    <h1>Platypus Endangerment</h1>
+```
+
+But if that text is very long and requires scrolling, break it up onto multiple lines.
+
+```html
+    <h1>
+        Platypus Endangerment ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere mauris sit amet nulla egestas blandit. Phasellus gravida dui eget nisi dictum
+    </h1>
+```
+
+---
+
+name: attributes
+
+# Attributes
+
+---
+
+template: attributes
+name: attributes-1
+
+## Concept
+You may have noticed that some tags contain *attributes*.  These are extra element settings.
+- Attributes are only ever present on opening tags.
+- Some are required, some are optional
+
+For example - the `img` tag requires the `src` setting indicating which image file to load.
+```html
+<img src="images/donkey.jpg" />
+```
+
+---
+
+name: conclusions
+
+# Conclusions
+
+---
+
+template: conclusions
+name: conclusions-1
+
+Thank you.  Bye.
