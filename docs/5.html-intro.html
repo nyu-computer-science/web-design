@@ -18,6 +18,7 @@ facilitating the control the content of web pages
 1. [Bare Minimum Code](#minimum)
 1. [Elements & Tags](#elements)
 1. [Attributes](#attributes)
+1. [Common Tags](#common)
 1. [Conclusions](#conclusions)
 
 ---
@@ -146,7 +147,7 @@ The `meta` tag resides within the `head`.
 - Notice that this is the first tag we have encountered that does not have a corresponding closing tag, such as `</meta>`.
 
 ```html
-            <meta charset="utf-8" />
+<meta charset="utf-8" />
 ```
 
 - This tag is metadata informing the web browser of the character set being used by the code on this page.
@@ -161,12 +162,14 @@ name: minimum-6
 
 ## title
 The `title` element is metadata indicating to the web browser the title of this document.
-- The `title` does not appear within the visible contents of the web page.
-- The `title` does appear usually in browser tabs and in search engines.
 
 ```html
-            <title>Insert the title of your page here</title>
+<title>Insert the title of your page here</title>
 ```
+
+- The `title` does not appear within the visible contents of the web page.
+- The `title` does appear often in browser tabs and in search engines.
+
 
 ---
 
@@ -175,11 +178,13 @@ name: minimum-7
 
 ## link
 The `link` element informs the web browser of the existence of another file it should load.
-- In this case, the `link` informs the browser that it should load a Cascading Style Sheets (CSS) file.
 
 ```html
-            <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
 ```
+
+- In this case, the `link` informs the browser that it should load a Cascading Style Sheets (CSS) file.
+
 
 ---
 
@@ -192,9 +197,9 @@ The contents of the `body` tag indicate the visible elements of the page.
 - Much of our remaining discussion will focus on other tags we can nested within the `body`.
 
 ```html
-        <body>
-            Insert the contents of your page here. 
-        </body>
+<body>
+    Insert the contents of your page here. 
+</body>
 ```
 
 ---
@@ -266,6 +271,17 @@ For example - the `link` opening tag.  There is no corresponding `</link>` closi
 <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
 ```
 
+---
+
+template: elements
+name: elements-4-1
+
+## Self-closing tags (continued)
+
+```html
+<link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+```
+
 Notice that it has a slash `/` within the opening tag itself at the end - this indicates that it is self-closing.
 - In HTML 5 (the latest version), this slash is not necessary, but optional.
 - In XHTML (the previous popular version still in use), it is necessary.
@@ -287,12 +303,26 @@ So the following code is a valid HTML document:
 <html lang="en"><head><meta charset="utf-8" /><title>Insert the title of your page here</title><link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
 ```
 
+So is this:
+```html
+<!doctype html>
+
+
+<html lang="en"><head><meta charset="utf-8" />
+
+
+<title>Insert the title of your page here<
+
+
+    /title>               <link rel="stylesheet" type="text/css"         href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
+```
+
 ---
 
 template: elements
 name: elements-6
 
-## Tabs (continued)
+## Tags (continued)
 
 Don't do that!  We want to be able to read and understand code easily.
 - Use line breaks between elements.
@@ -310,11 +340,6 @@ Not this:
 <article>
 <img src="images/donkey.jpg" />
 </article>
-```
-
-Nor this:
-```html
-<article><img src="images/donkey.jpg" /></article>
 ```
 
 ---
@@ -358,6 +383,95 @@ For example - the `img` tag requires the `src` setting indicating which image fi
 ```html
 <img src="images/donkey.jpg" />
 ```
+
+---
+
+name: commmon
+
+# Common Tags
+
+---
+
+template: common
+name: common-1
+
+## Universal
+Tags to setup every HTML document:
+
+- html
+- head
+- body
+
+---
+
+template: common
+name: common-2
+
+## Metadata in the head
+Tags used for settings within the head:
+
+- title
+- meta
+- script
+- link
+- style
+
+---
+
+template: common
+name: common-3
+
+## Body content
+Tags used to indicate content within the body:
+
+- h1 - h6
+- a
+- p
+- br
+- strong
+- ul
+- ol
+- li
+- img
+- figure
+- figcaption
+- video
+- audio
+- source
+
+
+---
+
+template: common
+name: common-4
+
+## Grouping
+Tags used to group content within the body:
+
+- header
+- footer
+- menu
+- nav
+- section
+- article
+- aside
+- div
+- span
+
+---
+
+template: common
+name: common-5
+
+## Forms
+Tags used in forms within the body:
+
+- form
+- input
+- textarea
+- label
+- select
+- option
 
 ---
 
