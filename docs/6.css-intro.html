@@ -83,7 +83,12 @@ The **preferred** method.  Put style sheet code in a separate file and link to t
 
 A `link` element should be nested within the `head` element of your HTML document.
 ```html
-<link rel="stylesheet" type="text/css" href="css/main.css" />
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        ...
+    </head>
+    ...
 ```
 
 Now you can write CSS code into that separate file and it will be applied to the content in the HTML document.
@@ -101,9 +106,15 @@ A **discouraged** method.  Put style sheet code into a `style` element within th
 
 A `style` element should be nested within the `head` element of your HTML document.
 ```html
-<style>
-body { background-color: pink; }
-</style>
+<html lang="en">
+    <head>
+        <style>
+body { 
+    background-color: pink; 
+}
+...
+        </style>
+        ...
 ```
 
 ---
@@ -117,9 +128,15 @@ A **discouraged** method.  Put style sheet code into a `style` attribute inside 
 
 This attribute would be added to any elements within the `body` of the document.
 ```html
-<p style="background-color: pink;">
-    Lorem ipsum dolor sit amet
-</p>...
+<html lang="en">
+    ...
+    <body>
+        <p style="background-color: pink;">
+            Lorem ipsum dolor sit amet
+        </p>
+        ...
+    </body>
+</html>
 ```
 
 ---
