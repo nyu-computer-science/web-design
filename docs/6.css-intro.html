@@ -343,6 +343,11 @@ Given the following HTML code:
         <p>Twas brillig and the slithy toves...</p>
     </aside>
 </article>
+
+<article>
+    <h2>Something Else</h2>
+    <p>Lorem ipsum dolor sit amet....</p>
+</article>
 ```
 
 ---
@@ -352,7 +357,7 @@ name: more-selectors-3a
 
 ## Direct descendent selectors (continued)
 
-The following CSS selector would only select the `p` paragraph that is nested directly within the `article`, not the other.
+The following CSS selector would only select the `p` paragraph that is nested directly within the `article` with the class `featured`, not any other paragraph.
 - Note the use of the greater than sign, `>`.
 
 ```css
