@@ -112,6 +112,13 @@ For example, given the following HTML code:
 <img id="donkey" src="images/donkey.jpg" />
 ```
 
+---
+
+template: selectors
+name: selectors-3a
+
+## Selecting by id attribute (continued)
+
 The following CSS code would select for just this one `donkey` image.
 ```css
 img#donkey {
@@ -146,6 +153,13 @@ For example, given the following HTML code:
     <li class="even">Beets</li>
 </ul>
 ```
+
+---
+
+template: selectors
+name: selectors-4a
+
+## Selecting by class attribute (continued)
 
 The following CSS code would select for only the `even` list items.
 ```css
@@ -308,6 +322,41 @@ article p {
 Another example with a mix of different selector types:
 ```css
 article#featured p.green {
+    background-color: #00ff00;
+}
+```
+
+---
+
+template: more-selectors
+name: more-selectors-3
+
+## Direct descendent selectors
+
+Given the following HTML code:
+```html
+<article class="featured">
+    <h2>Something Important</h2>
+    <p>Lorem ipsum dolor sit amet....</p>
+    <aside>
+        <h3>A Side Note</h3>
+        <p>Twas brillig and the slithy toves...</p>
+    </aside>
+</article>
+```
+
+---
+
+template: more-selectors
+name: more-selectors-3a
+
+## Direct descendent selectors (continued)
+
+The following CSS selector would only select the `p` paragraph that is nested directly within the `article`, not the other.
+- Note the use of the greater than sign, `>`.
+
+```css
+article.featured > p {
     background-color: #00ff00;
 }
 ```
