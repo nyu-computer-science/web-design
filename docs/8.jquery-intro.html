@@ -240,12 +240,17 @@ template: content
 name: content-1
 
 ## Hiding an element
-To hide an element, place this in the appropriate event handler code.
+Let's say you had an image of a donkey in the HTML.
+```html
+<img id="my_donkey" src="images/donkey.jpg" />
+```
+
+To hide this element, place this in the appropriate event handler code.
 ```javascript
 $("img#my_donkey").hide();
 ```
 
-You can also make an element gradually fade away.
+You can alternatively make an element gradually fade away.
 ```javascript
 $("img#my_donkey").fadeOut();
 ```
@@ -261,7 +266,7 @@ To show an element that has been hidden, place this in the appropriate event han
 $("img#my_donkey").show();
 ```
 
-You can also make an element gradually fade in.
+You can alternatively make an element gradually fade in.
 ```javascript
 $("img#my_donkey").fadeIn();
 ```
@@ -271,13 +276,13 @@ $("img#my_donkey").fadeIn();
 template: content
 name: content-3
 
-## Changing the text nested within an element
+## Changing the content nested within an element
 To alter the text nested within an element...
 ```javascript
 $("p#my_paragraph").text("Tri-tip prosciutto drumstick swine");
 ```
 
-You can also write HTML nested into an element
+You can alternatively write HTML that will be nested within the selected element
 ```javascript
 $("p#my_paragraph").text("<strong>Tri-tip <a href='http://nytimes.com'>prosciutto</a> drumstick swine");
 ```
@@ -308,10 +313,14 @@ template: content
 name: content-5
 
 ## Changing an attribute value
-Any attribute of any HTML element can have its value changed...  for example, to change the source image used by an `img` element.
+Any attribute of any HTML element can have its value changed.
+
+For example, to change the source image used by an `img` element.
 ```javascript
 $("img#my_donkey").attr("src", "images/mule.jpg");
 ```
+
+This, of course, assumes you have an image named `mule.jpg` in the `images` directory.
 
 ---
 
