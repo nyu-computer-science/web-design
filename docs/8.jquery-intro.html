@@ -33,25 +33,24 @@ name: overview-1
 
 ## Javascript
 Javascript is an interpreted programming language originally invented by Brendan Eich in 1995 at Netscape.
-- The first widely used web browser with a Graphical User Interface (GUI) was Mosaic, created by Marc Andreessen and Eric Bina at the National Center for Supercomputing Applications (NCSA) - a federal/state/corporate/academic research center housed at the University of Illinois at Urbana-Champaign - in 1993
-- These two people then left the NCSA and started the Netscape company to create an improved successor, the Netscape browser, in 1994
-- A year later, Eich's Javascript interpreter was included in the Netscape browser, along with the usual HTML interpreters (CSS didn't begin to be supported by web browsers until 1996)
+- The first widely used web browser with a Graphical User Interface (GUI) was *Mosaic*, created by Marc Andreessen and Eric Bina at the National Center for Supercomputing Applications (NCSA) - a federal/state/corporate/academic research center housed at the University of Illinois at Urbana-Champaign - in 1993
+- These two people then left the NCSA and started the **Netscape** company to create an improved successor, the Netscape browser, in 1994
+- A year later, **Eich's Javascript interpreter** was included in the Netscape browser, along with the usual HTML interpreter (CSS didn't begin to be supported by web browsers until 1996)
 
 ---
 
 template: overview
 name: overview-2
 
-## The browser war
-- Microsoft released its first web browser, Internet Explorer (IE), in 1995 - based on Mosaic, which they had licensed
-- IE included a clone of Netscape's Javascript Microsoft called JScript
+## The browser wars
+- Microsoft released its first web browser, **Internet Explorer** (IE), in 1995 - based on Mosaic, which they had licensed
+- IE included a clone of Netscape's Javascript Microsoft called **JScript**
 - Microsoft had reverse-engineered Netscape's interpreter
-- JScript and Javascript were almost identical, with sufficient difference to require programmers to usually write two versions of their code - one for Netscape browsers and another for IE
-- Many websites of this era contained signs saying "Best viewed in Netscape" or "Best viewed in Internet Explorer" to warn users that the site was not fully cross-browser compatible
+- JScript and Javascript were almost identical, with sufficient difference to *require programmers to usually write two versions of their code* - one for Netscape browsers and another for IE
+- Many websites of this era contained signs saying "*Best viewed in Netscape*" or "*Best viewed in Internet Explorer*" to pick sides and warn users that the site was not fully cross-browser compatible
 - Thus began the era of [the first browser war](https://en.wikipedia.org/wiki/Browser_wars) (1995 - 2001), with Internet Explorer and Netscape vying to dominate the web browser market.
-- Eventually, Netscape lost the war and they released their code to the open source community
-- The US government sued (and won) Microsoft in 2001 for maintaining a monopoly on web browsers primarily because it included Internet Explorer as part of the operating system.
-
+- Eventually, *Netscape lost the war* and they released their code to the open source community
+- *The US government sued (and won) Microsoft* in 2001 for maintaining a monopoly on web browsers primarily because it included Internet Explorer as part of the operating system.
 - Browsers today are mostly compatible in how they interpret Javascript
 
 ---
@@ -61,9 +60,9 @@ name: overview-3
 
 ## Neverending war
 The browser wars never quite ended...
-- Google's Chrome, first released in 2011, [maintains the lead](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables), with Safari in second place by market share
-- Mozilla, a non-profit foundation entrusted by Netscape to maintain their source code, continues to maintain its successor, Firefox - the third most popular web browser
-- Brendan Eich, inventor of Javascript, has recently created the [Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser)) which attempts to change the way the web is funded through ads and behavior profiling
+- **Google's Chrome**, first released in 2011, [maintains the lead](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables), with **Safari** in second place by market share
+- **Mozilla**, a non-profit foundation spun off by Netscape to maintain their source code, continues to maintain its successor, Firefox - the third most popular web browser
+- Brendan Eich, inventor of Javascript, has recently created the **[Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser))** which attempts to change the way the web is funded through ads and behavior profiling
 - With many of the old-timers unhappy with the way The Web turned out, and with corporate and nation-state actors battling for control, the future direction of The Web and the browsers is still uncertain
 
 ---
@@ -73,9 +72,9 @@ name: overview-4
 
 ## Javascript today
 Today, the browsers are mostly compatible in how they interpret Javascript
-- The capabilities of Javascript, and its use in web development, have continued to grow... it is now also used for server side logic with the Node.js interpreter.
+- The capabilities of Javascript, and its use in web development, have continued to grow... it is now also used for server side logic with the **Node.js** interpreter.
 - Internet Explorer mostly supports standard Javascript - it is still considered something of a pariah by developers.
-- There remain some differences in browser implementation, but easy-to-install *frameworks*, like JQuery, easily smooth them out.
+- There remain some differences in browser implementation, but easy-to-install **frameworks**, like JQuery, easily smooth them out.
 - **JQuery** provides a single set of interactive behaviors that work consistently across browsers by abstracting the code away from the browser-specific implementations.
 
 ---
@@ -301,9 +300,9 @@ $("p#my_paragraph").css("color", "green");
 Multiple styles can be changed at once:
 ```javascript
 $("p#my_paragraph").css({
-    color: "green",
-    backgroundColor: "blue",
-    opacity: 0.5
+    "color": "green",
+    "background-color": "blue",
+    "opacity": 0.5
 });
 ```
 
@@ -347,6 +346,26 @@ $("img#my_donkey").attr("src", "images/mule.jpg");
 ```
 
 This, of course, assumes you have an image named `mule.jpg` in the `images` directory.
+
+---
+
+template: content
+name: content-7
+
+## Animating an element
+Any element can be animated by transitioning from its current styles to a new style.  Animations can include transitions involving the dimension (`width` and `height`), position (`top` and `left`), or `opacity` (a number from 0 to 1)
+
+For example, to move an element to near the top left of the browser viewport while resizing it:
+```javascript
+// first make sure the element can be positioned before trying to change its position
+$("img#donkey").css('position', 'absolute');
+
+// now animate it!
+$("img#donkey").animate({
+    "top": "10px",
+    "left": "20px"
+}, 2000); // 2000 represents 2 seconds in milliseconds
+```
 
 ---
 
