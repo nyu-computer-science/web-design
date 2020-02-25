@@ -62,8 +62,8 @@ name: overview-3
 The browser wars never quite ended...
 - **Google's Chrome**, first released in 2011, [maintains the lead](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables), with **Safari** in second place by market share
 - **Mozilla**, a non-profit foundation spun off by Netscape to maintain their source code, continues to maintain its successor, Firefox - the third most popular web browser
-- Brendan Eich, inventor of Javascript, has recently created the **[Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser))** which attempts to change the way the web is funded through ads and behavior profiling
-- With many of the old-timers unhappy with the way The Web turned out, and with corporate and nation-state actors battling for control, the future direction of The Web and the browsers is still uncertain
+- Brendan Eich, inventor of Javascript, has recently created the **[Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser)**) which attempts to offer an alternative funding model for websites besides the standard ad and behavior profiling model promoted by the big tech companies.
+- With many of the old-timers unhappy with the way The Web turned out, with corporate and nation-state actors battling for control, and with the emergence and growth of the [Dark Web](https://en.wikipedia.org/wiki/Dark_web), the future direction of The Web and the browsers is still uncertain
 
 ---
 
@@ -90,10 +90,10 @@ name: interaction-1
 
 ## Event-driven programming
 When we speak fo using Javascript to add interactive behaviors to web pages, we are usually referring to Javascript's ability to respond to **events**:
-- clicking something on the page
-- moving the mouse over something on the page
-- moving the mouse off of something on the page
-- pressing a key while viewing a web page
+- **clicking** something on the page
+- **moving the mouse over** something on the page
+- **moving the mouse off** of something on the page
+- **pressing a key** while viewing a web page
 - and more...
 
 ---
@@ -225,6 +225,21 @@ $("p#my_paragraph").mouseout(function() {
 
     //everything you want to have happen when the mouse goes out of the paragraph goes above here
 });
+```
+
+---
+
+template: events
+name: events-4
+
+## Time-driven events
+To perform some change to the page after a certain period of time has passed, use the setTimeout function.
+```javascript
+setTimeout(function() {
+    //everything you want to have happen after the specified time has passed goes below here
+
+    //everything you want to have happen after the specified time has passed goes above here
+}, 2000); // 2000 represents 2 seconds (in milliseconds) ... adjust this number as needed
 ```
 
 ---
