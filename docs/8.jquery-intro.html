@@ -15,6 +15,9 @@ adding interactive behavior to static web pages
 
 1. [Overview](#overview)
 1. [Interactive Behaviors](#interaction)
+1. [Installing JQuery](#install)
+1. [Handling Events](#events)
+1. [Modifying Content](#content)
 1. [Conclusions](#conclusions)
 
 ---
@@ -107,10 +110,209 @@ We can broadly categorize events into three buckets
 
 ---
 
-template: overview
-name: overview-1
+name: install
 
-## Javascript
+# Installing JQuery
+
+---
+
+template: install
+name: install-1
+
+## Download
+To install JQuery, simply download it from the [jquery.com](https://jquery.com/) web site.
+- JQuery is nothing but a file containing some well-written Javascript code.
+- Place the downloaded Javascript file into a nice directory, for example a `js` sub-directory of your main project directory
+
+
+---
+
+template: install
+name: install-2
+
+## Install
+Once downloaded, add links to two Javascript files to your HTML.
+- Add a link to the downloaded from the `head` of your HTML document using the `script` tag... make sure the path is correct!
+- Add another link to a custom javascript file you will make yourself **after** the link to the JQuery file.
+
+```html
+<head>
+    <title>JQuery Example</title>
+    <meta charset="utf-8" />
+    <!-- include any CSS links as you would normally do -->
+    <!-- make sure the path below is correct for the version you downloaded and the folder you placed it into-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+```
+
+---
+
+template: install
+name: install-3
+
+## Start using
+Create the custom Javascript file you linked to and add the following starter code to it.
+- Any code you place between the two comments will be executed when the web page it is linked from finishes loading.
+
+```javascript
+$(function() {
+    //everything else you put into this file goes below here
+
+
+    //everything else you put into this file goes above here
+});
+```
+
+---
+
+name: events
+
+# Handling Events
+
+---
+
+template: events
+name: events-1
+
+## Click events
+To handle click events, you will need to put something the user can click on into your HTML code.
+```html
+<input type="button" id="my_button" value="Click me!" />
+```
+
+And then detect clicks on this element in your custom Javascript code (placed between the two comments noted previously).
+```javascript
+$("input#my_button").click(function() {
+    //everything you want to have happen when the button is clicked goes below here
+
+    //everything you want to have happen when the button is clicked goes above here
+});
+```
+
+---
+
+template: events
+name: events-2
+
+## Mouseover events
+To handle mouseover events, when the user hovers their mouse over an element, you will need to put something the user can hover over into your HTML code.
+```html
+<p id="my_paragraph">
+    Viennese, extraction chicory ut kopi-luwak ristretto froth instant ristretto percolator. 
+    As, single shot dripper a doppio americano wings.
+</p>
+```
+
+And then detect mouseover events on this element in your custom Javascript code (placed between the two comments noted previously).
+```javascript
+$("p#my_paragraph").mouseover(function() {
+    //everything you want to have happen when the mouse goes over the paragraph goes below here
+
+    //everything you want to have happen when the mouse goes over the paragraph goes above here
+});
+```
+
+---
+
+template: events
+name: events-3
+
+## Mouseout events
+To detect mouseout events - when the user stops hovering over this element - in your custom Javascript code (placed between the two comments noted previously).
+```javascript
+$("p#my_paragraph").mouseout(function() {
+    //everything you want to have happen when the mouse goes out of the paragraph goes below here
+
+    //everything you want to have happen when the mouse goes out of the paragraph goes above here
+});
+```
+
+---
+
+name: content
+
+# Modifying Content
+
+---
+
+template: content
+name: content-1
+
+## Hiding an element
+To hide an element, place this in the appropriate event handler code.
+```javascript
+$("img#my_donkey").hide();
+```
+
+You can also make an element gradually fade away.
+```javascript
+$("img#my_donkey").fadeOut();
+```
+
+---
+
+template: content
+name: content-2
+
+## Showing a hidden element
+To show an element that has been hidden, place this in the appropriate event handler code.
+```javascript
+$("img#my_donkey").show();
+```
+
+You can also make an element gradually fade in.
+```javascript
+$("img#my_donkey").fadeIn();
+```
+
+---
+
+template: content
+name: content-3
+
+## Changing the text nested within an element
+To alter the text nested within an element...
+```javascript
+$("p#my_paragraph").text("Tri-tip prosciutto drumstick swine");
+```
+
+You can also write HTML nested into an element
+```javascript
+$("p#my_paragraph").text("<strong>Tri-tip <a href='http://nytimes.com'>prosciutto</a> drumstick swine");
+```
+
+---
+
+template: content
+name: content-4
+
+## Changing the style of an element
+Any CSS styles can be adjusted through Javascript code
+```javascript
+$("p#my_paragraph").css("color", "green");
+```
+
+Multiple styles can be changed at once:
+```javascript
+$("p#my_paragraph").css({
+    color: "green",
+    backgroundColor: "blue",
+    opacity: 0.5
+});
+```
+
+---
+
+template: content
+name: content-5
+
+## Changing an attribute value
+Any attribute of any HTML element can have its value changed...  for example, to change the source image used by an `img` element.
+```javascript
+$("img#my_donkey").attr("src", "images/mule.jpg");
+```
+
 ---
 
 name: conclusions
