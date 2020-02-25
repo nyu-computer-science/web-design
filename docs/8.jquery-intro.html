@@ -312,6 +312,32 @@ $("p#my_paragraph").css({
 template: content
 name: content-5
 
+## Modifying an element's class
+It is possible to change an element's style by dynamically adding or removing a class to it, assuming those classes are selected by some CSS code that affects their styles.
+
+For example, assume the following CSS code:
+```css
+.pretty {
+    font-weight: bold;
+    background-color: pink;
+}
+```
+
+The following would add the `pretty` class to an element, which would apply the corresponding CSS styles.
+```javascript
+$("p#my_paragraph").addClass('pretty');
+```
+
+Removing a class is equally easy.
+```javascript
+$("p#my_paragraph").removeClass('pretty');
+```
+
+---
+
+template: content
+name: content-6
+
 ## Changing an attribute value
 Any attribute of any HTML element can have its value changed.
 
