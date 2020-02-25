@@ -14,13 +14,7 @@ adding interactive behavior to static web pages
 # Agenda
 
 1. [Overview](#overview)
-1. [Container Elements](#containers)
-1. [Calculating Widths](#widths)
-1. [Block vs. Inline Elements](#display)
-1. [A Word About Divs and Spans](#divs-spans)
-1. [Position](#position)
-1. [Float and Clear](#float-clear)
-1. [Examples](#examples)
+1. [Interactive Behaviors](#interaction)
 1. [Conclusions](#conclusions)
 
 ---
@@ -62,16 +56,6 @@ name: overview-2
 template: overview
 name: overview-3
 
-## Javascript today
-Today, the browsers are mostly compatible in how they interpret Javascript
-- Internet Explorer mostly supports standard Javascript, as do other main browsers
-- There remain some differences in implementation, but frameworks like JQuery easily smooth them out.
-- JQuery provides a single set of code commands that work the same across browsers by translating them automatically to match the browser being used.
----
-
-template: overview
-name: overview-4
-
 ## Neverending war
 The browser wars never quite ended...
 - Google's Chrome, first released in 2011, [maintains the lead](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables), with Safari in second place by market share
@@ -79,6 +63,54 @@ The browser wars never quite ended...
 - Brendan Eich, inventor of Javascript, has recently created the [Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser)) which attempts to change the way the web is funded through ads and behavior profiling
 - With many of the old-timers unhappy with the way The Web turned out, and with corporate and nation-state actors battling for control, the future direction of The Web and the browsers is still uncertain
 
+---
+
+template: overview
+name: overview-4
+
+## Javascript today
+Today, the browsers are mostly compatible in how they interpret Javascript
+- The capabilities of Javascript, and its use in web development, have continued to grow... it is now also used for server side logic with the Node.js interpreter.
+- Internet Explorer mostly supports standard Javascript - it is still considered something of a pariah by developers.
+- There remain some differences in browser implementation, but easy-to-install *frameworks*, like JQuery, easily smooth them out.
+- **JQuery** provides a single set of interactive behaviors that work consistently across browsers by abstracting the code away from the browser-specific implementations.
+
+---
+
+name: interaction
+
+# Interaction
+
+---
+
+template: interaction
+name: interaction-1
+
+## Event-driven programming
+When we speak fo using Javascript to add interactive behaviors to web pages, we are usually referring to Javascript's ability to respond to **events**:
+- clicking something on the page
+- moving the mouse over something on the page
+- moving the mouse off of something on the page
+- pressing a key while viewing a web page
+- and more...
+
+---
+
+template: interaction
+name: interaction-2
+
+## Types of events
+We can broadly categorize events into three buckets
+- Events where the user has done something (e.g. loading a page)
+- Events where the browser itself has done something (e.g. clicking, typing, etc)
+- Time-based events (e.g. a certain amount of time passing)
+
+---
+
+template: overview
+name: overview-1
+
+## Javascript
 ---
 
 name: conclusions
