@@ -1,0 +1,94 @@
+---
+layout: presentation
+title: JQuery for Web Designers
+permalink: /jquery-intro/
+---
+
+class: center, middle
+
+# JQuery for Web Designers
+adding interactive behavior to static web pages
+
+---
+
+# Agenda
+
+1. [Overview](#overview)
+1. [Container Elements](#containers)
+1. [Calculating Widths](#widths)
+1. [Block vs. Inline Elements](#display)
+1. [A Word About Divs and Spans](#divs-spans)
+1. [Position](#position)
+1. [Float and Clear](#float-clear)
+1. [Examples](#examples)
+1. [Conclusions](#conclusions)
+
+---
+
+name: overview
+
+# Overview
+
+---
+
+template: overview
+name: overview-1
+
+## Javascript
+Javascript is an interpreted programming language originally invented by Brendan Eich in 1995 at Netscape.
+- The first widely used web browser with a Graphical User Interface (GUI) was Mosaic, created by Marc Andreessen and Eric Bina at the National Center for Supercomputing Applications (NCSA) - a federal/state/corporate/academic research center housed at the University of Illinois at Urbana-Champaign - in 1993
+- These two people then left the NCSA and started the Netscape company to create an improved successor, the Netscape browser, in 1994
+- A year later, Eich's Javascript interpreter was included in the Netscape browser, along with the usual HTML interpreters (CSS didn't begin to be supported by web browsers until 1996)
+
+---
+
+template: overview
+name: overview-2
+
+## The browser war
+- Microsoft released its first web browser, Internet Explorer (IE), in 1995 - based on Mosaic, which they had licensed
+- IE included a clone of Netscape's Javascript Microsoft called JScript
+- Microsoft had reverse-engineered Netscape's interpreter
+- JScript and Javascript were almost identical, with sufficient difference to require programmers to usually write two versions of their code - one for Netscape browsers and another for IE
+- Many websites of this era contained signs saying "Best viewed in Netscape" or "Best viewed in Internet Explorer" to warn users that the site was not fully cross-browser compatible
+- Thus began the era of [the first browser war](https://en.wikipedia.org/wiki/Browser_wars) (1995 - 2001), with Internet Explorer and Netscape vying to dominate the web browser market.
+- Eventually, Netscape lost the war and they released their code to the open source community
+- The US government sued (and won) Microsoft in 2001 for maintaining a monopoly on web browsers primarily because it included Internet Explorer as part of the operating system.
+
+- Browsers today are mostly compatible in how they interpret Javascript
+
+---
+
+template: overview
+name: overview-3
+
+## Javascript today
+Today, the browsers are mostly compatible in how they interpret Javascript
+- Internet Explorer mostly supports standard Javascript, as do other main browsers
+- There remain some differences in implementation, but frameworks like JQuery easily smooth them out.
+- JQuery provides a single set of code commands that work the same across browsers by translating them automatically to match the browser being used.
+---
+
+template: overview
+name: overview-4
+
+## Neverending war
+The browser wars never quite ended...
+- Google's Chrome, first released in 2011, [maintains the lead](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables), with Safari in second place by market share
+- Mozilla, a non-profit foundation entrusted by Netscape to maintain their source code, continues to maintain its successor, Firefox - the third most popular web browser
+- Brendan Eich, inventor of Javascript, has recently created the [Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser)) which attempts to change the way the web is funded through ads and behavior profiling
+- With many of the old-timers unhappy with the way The Web turned out, and with corporate and nation-state actors battling for control, the future direction of The Web and the browsers is still uncertain
+
+---
+
+name: conclusions
+
+# Conclusions
+
+---
+
+template: conclusions
+name: conclusions-1
+
+At this point you have a solid understanding of the history of Javascript.  Now on to JQuery!
+- Thank you.  Bye.
