@@ -303,18 +303,15 @@ So the following code is a valid HTML document:
 <html lang="en"><head><meta charset="utf-8" /><title>Insert the title of your page here</title><link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
 ```
 
-So is this:
+So is this (not that you should do this):
 ```html
 <!doctype html>
 
-
-<html lang="en"><head><meta charset="utf-8" />
-
-
+<html 
+lang="en"><head                 ><meta          charset="utf-8" />
 <title>Insert the title of your page here<
-
-
-    /title>               <link rel="stylesheet" type="text/css"         href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
+    /title>               <link rel="stylesheet" 
+            type="text/css"         href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
 ```
 
 ---
