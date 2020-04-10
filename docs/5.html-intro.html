@@ -7,6 +7,7 @@ permalink: /html/
 class: center, middle
 
 # Intro to Hypertext Markup Language
+
 facilitating the control the content of web pages
 
 ---
@@ -33,8 +34,9 @@ template: overview
 name: overview-1
 
 Hypertext Markup Language (HTML) is used to indicate the contents of a web page.
+
 - What images, text, videos, audio, or animations should be placed on the page
-- What is the *semantic* meaning of each piece of content, i.e. what is it describing?
+- What is the _semantic_ meaning of each piece of content, i.e. what is it describing?
 
 ---
 
@@ -47,7 +49,8 @@ name: separation
 template: separation
 name: separation-1
 
-The **separation of concerns** is a philosophy popular in technology that different tasks should be accomplished by different technologis.  With regards the Web:
+The **separation of concerns** is a philosophy popular in technology that different tasks should be accomplished by different technologis. With regards the Web:
+
 - The semantic content should be controlled by Hypertext Markup Language (HTML)
 - The visual presentation of content should be controlled by Cascading Style Sheets (CSS)
 - The interactive behavior of content should be controlled by Javascript (JS)
@@ -66,16 +69,16 @@ name: minimum-1
 At the very least, an HTML document contains the following code:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Insert the title of your page here</title>
-        <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
-    </head>
-    <body>
-        Insert the contents of your page here. 
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Insert the title of your page here</title>
+    <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+  </head>
+  <body>
+    Insert the contents of your page here.
+  </body>
 </html>
 ```
 
@@ -85,10 +88,11 @@ template: minimum
 name: minimum-2
 
 ## doctype
+
 Let's start with the first line, the `doctype`.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 ```
 
 - This informs the web browser that this is an HTML version 5 document.
@@ -105,9 +109,9 @@ name: minimum-3
 Moving on, we see the `html` tags the beginning and the end.
 
 ```html
-    <html>
-        ...
-    </html>
+<html>
+  ...
+</html>
 ```
 
 - All HTML code (except the `doctype`, which is technically not HTML) is surrounded by these beginning and ending `html` tags.
@@ -120,21 +124,22 @@ template: minimum
 name: minimum-4
 
 ## head and body
+
 Within the `html` element, indented one level further in, we see two sets of tags: `head` and `body`.
 
 ```html
-        <head>
-            ...
-        </head>
+<head>
+  ...
+</head>
 
-        <body>
-            ...
-        </body>
+<body>
+  ...
+</body>
 ```
 
-- The only two elements to be *nested* directly within the `html` element are these two: `head` and `body`.
+- The only two elements to be _nested_ directly within the `html` element are these two: `head` and `body`.
 - All other HTML elements go further nested within one of these two.
-- The `head` will contain *metadata* about the page, and perhaps other invisible instructions to the web browser. 
+- The `head` will contain _metadata_ about the page, and perhaps other invisible instructions to the web browser.
 - The `body` willl contain the visible parts of the page - the things the end-user will see.
 
 ---
@@ -143,7 +148,9 @@ template: minimum
 name: minimum-5
 
 ## meta charset
-The `meta` tag resides within the `head`. 
+
+The `meta` tag resides within the `head`.
+
 - Notice that this is the first tag we have encountered that does not have a corresponding closing tag, such as `</meta>`.
 
 ```html
@@ -152,7 +159,7 @@ The `meta` tag resides within the `head`.
 
 - This tag is metadata informing the web browser of the character set being used by the code on this page.
 - Different character sets can support different languages.
-- UTF-8 is a *Unicode*-based character set that supports all known written languages.
+- UTF-8 is a _Unicode_-based character set that supports all known written languages.
 - If the character set is not specified correctly, non-English characters may not render correctly when the page is loaded by the browser.
 
 ---
@@ -161,6 +168,7 @@ template: minimum
 name: minimum-6
 
 ## title
+
 The `title` element is metadata indicating to the web browser the title of this document.
 
 ```html
@@ -170,13 +178,13 @@ The `title` element is metadata indicating to the web browser the title of this 
 - The `title` does not appear within the visible contents of the web page.
 - The `title` does appear often in browser tabs and in search engines.
 
-
 ---
 
 template: minimum
 name: minimum-7
 
 ## link
+
 The `link` element informs the web browser of the existence of another file it should load.
 
 ```html
@@ -185,20 +193,21 @@ The `link` element informs the web browser of the existence of another file it s
 
 - In this case, the `link` informs the browser that it should load a Cascading Style Sheets (CSS) file.
 
-
 ---
 
 template: minimum
 name: minimum-8
 
 ### body contents
+
 The contents of the `body` tag indicate the visible elements of the page.
+
 - In this case, we simply specify some text to show on the page.
 - Much of our remaining discussion will focus on other tags we can nested within the `body`.
 
 ```html
 <body>
-    Insert the contents of your page here. 
+  Insert the contents of your page here.
 </body>
 ```
 
@@ -214,7 +223,9 @@ template: elements
 name: elements-1
 
 ## Elements
-An HTML *element* is a conceptual piece of content or metadata in the document. E.g.
+
+An HTML _element_ is a conceptual piece of content or metadata in the document. E.g.
+
 - the title of the document
 - an instruction to load a CSS document
 - an image
@@ -228,7 +239,9 @@ template: elements
 name: elements-2
 
 ## Tags
+
 Tags are the code that is written to inform the browser that you wish to create an element.
+
 - the `<title>...</title>` tags
 - the `<link />` tag
 - an `<img />` tag
@@ -243,14 +256,16 @@ name: elements-3
 
 ## Tag pairs
 
-As a general rule, `tags` come in pairs - an opening and a closing `tag` together indicate the start and end of a conceptual `element`.  
+As a general rule, `tags` come in pairs - an opening and a closing `tag` together indicate the start and end of a conceptual `element`.
 
 For example - an opening paragraph tag.
+
 ```html
-<p>
+<p></p>
 ```
 
-And its corresponding closing - closing tags use the same *tag name* as the opening tag, e.g. `p`, but place a slash `/` in front of it.
+And its corresponding closing - closing tags use the same _tag name_ as the opening tag, e.g. `p`, but place a slash `/` in front of it.
+
 ```html
 </p>
 ```
@@ -262,10 +277,11 @@ name: elements-4
 
 ## Self-closing tags
 
-Some opening tags do not have a separate closing tag.  These are *self-closing tags*.
+Some opening tags do not have a separate closing tag. These are _self-closing tags_.
 
-For example - the `link` opening tag.  There is no corresponding `</link>` closing tag.
-- This is because there is no need to ever put any other tags nested *inside* the `link` element.
+For example - the `link` opening tag. There is no corresponding `</link>` closing tag.
+
+- This is because there is no need to ever put any other tags nested _inside_ the `link` element.
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
@@ -283,6 +299,7 @@ name: elements-4-1
 ```
 
 Notice that it has a slash `/` within the opening tag itself at the end - this indicates that it is self-closing.
+
 - In HTML 5 (the latest version), this slash is not necessary, but optional.
 - In XHTML (the previous popular version still in use), it is necessary.
 - We will write our code in XHTML-compatible HTML 5... so **we will include the self-closing slash**.
@@ -295,22 +312,34 @@ name: elements-5
 ## Tabs
 
 Line breaks, multiple spaces, and tabs are ignored by the web browser.
+
 - They are all interpreted as a single space character.
 
 So the following code is a valid HTML document:
+
 ```html
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8" /><title>Insert the title of your page here</title><link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Insert the title of your page here</title>
+    <link rel="stylesheet" type="text/css" href="css/some_stylesheet.css" />
+  </head>
+  <body>
+    Insert the contents of your page here.
+  </body>
+</html>
 ```
 
 So is this:
+
 ```html
 <!doctype html>
 
-<html 
+<html
 lang="en"><head                 ><meta          charset="utf-8" />
 <title>Insert the title of your page here<
-    /title>               <link rel="stylesheet" 
+    /title>               <link rel="stylesheet"
             type="text/css"         href="css/some_stylesheet.css" /></head><body>Insert the contents of your page here.</body></html>
 ```
 
@@ -321,21 +350,24 @@ name: elements-6
 
 ## Tags (continued)
 
-Don't do that!  We want to be able to read and understand code easily.
+Don't do that! We want to be able to read and understand code easily.
+
 - Use line breaks between elements.
 - If one element is nested within another, indent the nested element within its parent element.
 
 Do this:
+
 ```html
 <article>
-    <img src="images/donkey.jpg" />
+  <img src="images/donkey.jpg" />
 </article>
 ```
 
 Not this:
+
 ```html
 <article>
-<img src="images/donkey.jpg" />
+  <img src="images/donkey.jpg" />
 </article>
 ```
 
@@ -349,15 +381,17 @@ name: elements-7
 With elements that contain only text nested within them, it's okay to write that text on one line with the element's tags.
 
 ```html
-    <h1>Platypus Endangerment</h1>
+<h1>Platypus Endangerment</h1>
 ```
 
 But if that text is very long and requires scrolling, break it up onto multiple lines.
 
 ```html
-    <h1>
-        Platypus Endangerment ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere mauris sit amet nulla egestas blandit. Phasellus gravida dui eget nisi dictum
-    </h1>
+<h1>
+  Platypus Endangerment ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  posuere mauris sit amet nulla egestas blandit. Phasellus gravida dui eget nisi
+  dictum
+</h1>
 ```
 
 ---
@@ -372,11 +406,14 @@ template: attributes
 name: attributes-1
 
 ## Concept
-You may have noticed that some tags contain *attributes*.  These are extra element settings.
+
+You may have noticed that some tags contain _attributes_. These are extra element settings.
+
 - Attributes are only ever present on opening tags.
 - Some are required, some are optional
 
 For example - the `img` tag requires the `src` setting indicating which image file to load.
+
 ```html
 <img src="images/donkey.jpg" />
 ```
@@ -394,7 +431,6 @@ Some elements require attributes with particular values in order to function pro
 - `checked` - used by some `input` elements... has only one meaningful value, 'checked'
 - `type` - used by the `link`, `script`, and `input` elements... has various values with specific meanings.
 - `rel` - used by the `link` element... usually has the value, `stylesheet`
-
 
 ---
 
@@ -428,6 +464,7 @@ template: common
 name: common-1
 
 ## Universal
+
 Elements required to setup every HTML document:
 
 - `html`
@@ -440,6 +477,7 @@ template: common
 name: common-2
 
 ## Metadata in the head
+
 Elements used for settings within the `head`:
 
 - `title`
@@ -454,6 +492,7 @@ template: common
 name: common-3
 
 ## Body content
+
 Elements used to indicate content within the `body`:
 
 - `h1` - `h6`
@@ -471,13 +510,13 @@ Elements used to indicate content within the `body`:
 - `audio`
 - `source`
 
-
 ---
 
 template: common
 name: common-4
 
 ## Grouping
+
 Elements used to group content within the `body`:
 
 - `header`
@@ -497,6 +536,7 @@ template: common
 name: common-5
 
 ## Forms
+
 Elements used in forms within the body:
 
 - `form`
@@ -512,7 +552,9 @@ template: common
 name: common-6
 
 ## Learn more
+
 Obviously you will want to see more information on using these in a practical sense.
+
 - Check out the [w3schools.com HTML tutorials](https://www.w3schools.com/html/).
 
 ---
@@ -527,4 +569,5 @@ template: conclusions
 name: conclusions-1
 
 You now have a basic understanding of the purpose of HTML, its syntax, and some of the common elements and tags.
-- Thank you.  Bye.
+
+- Thank you. Bye.

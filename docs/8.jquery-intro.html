@@ -7,6 +7,7 @@ permalink: /jquery-intro/
 class: center, middle
 
 # JQuery for Web Designers
+
 adding interactive behavior to static web pages
 
 ---
@@ -32,8 +33,10 @@ template: overview
 name: overview-1
 
 ## Javascript
+
 Javascript is an interpreted programming language originally invented by Brendan Eich in 1995 at Netscape.
-- The first widely used web browser with a Graphical User Interface (GUI) was *Mosaic*, created by Marc Andreessen and Eric Bina at the National Center for Supercomputing Applications (NCSA) - a federal/state/corporate/academic research center housed at the University of Illinois at Urbana-Champaign - in 1993
+
+- The first widely used web browser with a Graphical User Interface (GUI) was _Mosaic_, created by Marc Andreessen and Eric Bina at the National Center for Supercomputing Applications (NCSA) - a federal/state/corporate/academic research center housed at the University of Illinois at Urbana-Champaign - in 1993
 - These two people then left the NCSA and started the **Netscape** company to create an improved successor, the Netscape browser, in 1994
 - A year later, **Eich's Javascript interpreter** was included in the Netscape browser, along with the usual HTML interpreter (CSS didn't begin to be supported by web browsers until 1996)
 
@@ -43,14 +46,15 @@ template: overview
 name: overview-2
 
 ## The browser wars
+
 - Microsoft released its first web browser, **Internet Explorer** (IE), in 1995 - based on Mosaic, which they had licensed
 - IE included a clone of Netscape's Javascript Microsoft called **JScript**
 - Microsoft had reverse-engineered Netscape's interpreter
-- JScript and Javascript were almost identical, with sufficient difference to *require programmers to usually write two versions of their code* - one for Netscape browsers and another for IE
-- Many websites of this era contained signs saying "*Best viewed in Netscape*" or "*Best viewed in Internet Explorer*" to pick sides and warn users that the site was not fully cross-browser compatible
+- JScript and Javascript were almost identical, with sufficient difference to _require programmers to usually write two versions of their code_ - one for Netscape browsers and another for IE
+- Many websites of this era contained signs saying "_Best viewed in Netscape_" or "_Best viewed in Internet Explorer_" to pick sides and warn users that the site was not fully cross-browser compatible
 - Thus began the era of [the first browser war](https://en.wikipedia.org/wiki/Browser_wars) (1995 - 2001), with Internet Explorer and Netscape vying to dominate the web browser market.
-- Eventually, *Netscape lost the war* and they released their code to the open source community
-- *The US government sued (and won) Microsoft* in 2001 for maintaining a monopoly on web browsers primarily because it included Internet Explorer as part of the operating system.
+- Eventually, _Netscape lost the war_ and they released their code to the open source community
+- _The US government sued (and won) Microsoft_ in 2001 for maintaining a monopoly on web browsers primarily because it included Internet Explorer as part of the operating system.
 - Browsers today are mostly compatible in how they interpret Javascript
 
 ---
@@ -59,7 +63,9 @@ template: overview
 name: overview-3
 
 ## Neverending war
+
 The browser wars never quite ended...
+
 - **Google's Chrome**, first released in 2011, [maintains the lead](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables), with **Safari** in second place by market share
 - **Mozilla**, a non-profit foundation spun off by Netscape to maintain their source code, continues to maintain its successor, Firefox - the third most popular web browser
 - Brendan Eich, inventor of Javascript, has recently created the **[Brave browser](https://en.wikipedia.org/wiki/Brave_(web_browser)**) which attempts to offer an alternative funding model for websites besides the standard ad and behavior profiling model promoted by the big tech companies.
@@ -71,7 +77,9 @@ template: overview
 name: overview-4
 
 ## Javascript today
+
 Today, the browsers are mostly compatible in how they interpret Javascript
+
 - The capabilities of Javascript, and its use in web development, have continued to grow... it is now also used for server side logic with the **Node.js** interpreter.
 - Internet Explorer mostly supports standard Javascript - it is still considered something of a pariah by developers.
 - There remain some differences in browser implementation, but easy-to-install **frameworks**, like JQuery, easily smooth them out.
@@ -89,7 +97,9 @@ template: interaction
 name: interaction-1
 
 ## Event-driven programming
+
 When we speak fo using Javascript to add interactive behaviors to web pages, we are usually referring to Javascript's ability to respond to **events**:
+
 - **clicking** something on the page
 - **moving the mouse over** something on the page
 - **moving the mouse off** of something on the page
@@ -102,7 +112,9 @@ template: interaction
 name: interaction-2
 
 ## Types of events
+
 We can broadly categorize events into three buckets
+
 - Events where the user has done something (e.g. loading a page)
 - Events where the browser itself has done something (e.g. clicking, typing, etc)
 - Time-based events (e.g. a certain amount of time passing)
@@ -119,10 +131,11 @@ template: install
 name: install-1
 
 ## Download
+
 To install JQuery, simply download it from the [jquery.com](https://jquery.com/) web site.
+
 - JQuery is nothing but a file containing some well-written Javascript code.
 - Place the downloaded Javascript file into a nice directory, for example a `js` sub-directory of your main project directory
-
 
 ---
 
@@ -130,18 +143,20 @@ template: install
 name: install-2
 
 ## Install
+
 Once downloaded, add links to two Javascript files to your HTML.
+
 - Add a link to the downloaded from the `head` of your HTML document using the `script` tag... make sure the path is correct!
 - Add another link to a custom javascript file you will make yourself **after** the link to the JQuery file.
 
 ```html
 <head>
-    <title>JQuery Example</title>
-    <meta charset="utf-8" />
-    <!-- include any CSS links as you would normally do -->
-    <!-- make sure the path below is correct for the version you downloaded and the folder you placed it into-->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+  <title>JQuery Example</title>
+  <meta charset="utf-8" />
+  <!-- include any CSS links as you would normally do -->
+  <!-- make sure the path below is correct for the version you downloaded and the folder you placed it into-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
 </head>
 ```
 
@@ -151,15 +166,15 @@ template: install
 name: install-3
 
 ## Start using
+
 Create the custom Javascript file you linked to and add the following starter code to it.
+
 - Any code you place between the two comments will be executed when the web page it is linked from finishes loading.
 
 ```javascript
-$(function() {
-    //everything else you put into this file goes below here
-
-
-    //everything else you put into this file goes above here
+$(function () {
+  //everything else you put into this file goes below here
+  //everything else you put into this file goes above here
 });
 ```
 
@@ -175,17 +190,19 @@ template: events
 name: events-1
 
 ## Click events
+
 To handle click events, you will need to put something the user can click on into your HTML code.
+
 ```html
 <input type="button" id="my_button" value="Click me!" />
 ```
 
 And then detect clicks on this element in your custom Javascript code (placed between the two comments noted previously).
-```javascript
-$("input#my_button").click(function() {
-    //everything you want to have happen when the button is clicked goes below here
 
-    //everything you want to have happen when the button is clicked goes above here
+```javascript
+$("input#my_button").click(function () {
+  //everything you want to have happen when the button is clicked goes below here
+  //everything you want to have happen when the button is clicked goes above here
 });
 ```
 
@@ -195,20 +212,22 @@ template: events
 name: events-2
 
 ## Mouseover events
+
 To handle mouseover events, when the user hovers their mouse over an element, you will need to put something the user can hover over into your HTML code.
+
 ```html
 <p id="my_paragraph">
-    Viennese, extraction chicory ut kopi-luwak ristretto froth instant ristretto percolator. 
-    As, single shot dripper a doppio americano wings.
+  Viennese, extraction chicory ut kopi-luwak ristretto froth instant ristretto
+  percolator. As, single shot dripper a doppio americano wings.
 </p>
 ```
 
 And then detect mouseover events on this element in your custom Javascript code (placed between the two comments noted previously).
-```javascript
-$("p#my_paragraph").mouseover(function() {
-    //everything you want to have happen when the mouse goes over the paragraph goes below here
 
-    //everything you want to have happen when the mouse goes over the paragraph goes above here
+```javascript
+$("p#my_paragraph").mouseover(function () {
+  //everything you want to have happen when the mouse goes over the paragraph goes below here
+  //everything you want to have happen when the mouse goes over the paragraph goes above here
 });
 ```
 
@@ -218,12 +237,13 @@ template: events
 name: events-3
 
 ## Mouseout events
-To detect mouseout events - when the user stops hovering over this element - in your custom Javascript code (placed between the two comments noted previously).
-```javascript
-$("p#my_paragraph").mouseout(function() {
-    //everything you want to have happen when the mouse goes out of the paragraph goes below here
 
-    //everything you want to have happen when the mouse goes out of the paragraph goes above here
+To detect mouseout events - when the user stops hovering over this element - in your custom Javascript code (placed between the two comments noted previously).
+
+```javascript
+$("p#my_paragraph").mouseout(function () {
+  //everything you want to have happen when the mouse goes out of the paragraph goes below here
+  //everything you want to have happen when the mouse goes out of the paragraph goes above here
 });
 ```
 
@@ -233,12 +253,13 @@ template: events
 name: events-4
 
 ## Time-driven events
-To perform some change to the page after a certain period of time has passed, use the setTimeout function.
-```javascript
-setTimeout(function() {
-    //everything you want to have happen after the specified time has passed goes below here
 
-    //everything you want to have happen after the specified time has passed goes above here
+To perform some change to the page after a certain period of time has passed, use the setTimeout function.
+
+```javascript
+setTimeout(function () {
+  //everything you want to have happen after the specified time has passed goes below here
+  //everything you want to have happen after the specified time has passed goes above here
 }, 2000); // 2000 represents 2 seconds (in milliseconds) ... adjust this number as needed
 ```
 
@@ -254,17 +275,21 @@ template: content
 name: content-1
 
 ## Hiding an element
+
 Let's say you had an image of a donkey in the HTML.
+
 ```html
 <img id="my_donkey" src="images/donkey.jpg" />
 ```
 
 To hide this element, place this in the appropriate event handler code.
+
 ```javascript
 $("img#my_donkey").hide();
 ```
 
 You can alternatively make an element gradually fade away.
+
 ```javascript
 $("img#my_donkey").fadeOut();
 ```
@@ -275,12 +300,15 @@ template: content
 name: content-2
 
 ## Showing a hidden element
+
 To show an element that has been hidden, place this in the appropriate event handler code.
+
 ```javascript
 $("img#my_donkey").show();
 ```
 
 You can alternatively make an element gradually fade in.
+
 ```javascript
 $("img#my_donkey").fadeIn();
 ```
@@ -291,14 +319,19 @@ template: content
 name: content-3
 
 ## Changing the content nested within an element
+
 To alter the text nested within an element...
+
 ```javascript
 $("p#my_paragraph").text("Tri-tip prosciutto drumstick swine");
 ```
 
 You can alternatively write HTML that will be nested within the selected element
+
 ```javascript
-$("p#my_paragraph").text("<strong>Tri-tip <a href='http://nytimes.com'>prosciutto</a> drumstick swine");
+$("p#my_paragraph").text(
+  "<strong>Tri-tip <a href='http://nytimes.com'>prosciutto</a> drumstick swine"
+);
 ```
 
 ---
@@ -307,17 +340,20 @@ template: content
 name: content-4
 
 ## Changing the style of an element
+
 Any CSS styles can be adjusted through Javascript code
+
 ```javascript
 $("p#my_paragraph").css("color", "green");
 ```
 
 Multiple styles can be changed at once:
+
 ```javascript
 $("p#my_paragraph").css({
-    "color": "green",
-    "background-color": "blue",
-    "opacity": 0.5
+  color: "green",
+  "background-color": "blue",
+  opacity: 0.5,
 });
 ```
 
@@ -327,24 +363,28 @@ template: content
 name: content-5
 
 ## Modifying an element's class
+
 It is possible to change an element's style by dynamically adding or removing a class to it, assuming those classes are selected by some CSS code that affects their styles.
 
 For example, assume the following CSS code:
+
 ```css
 .pretty {
-    font-weight: bold;
-    background-color: pink;
+  font-weight: bold;
+  background-color: pink;
 }
 ```
 
 The following would add the `pretty` class to an element, which would apply the corresponding CSS styles.
+
 ```javascript
-$("p#my_paragraph").addClass('pretty');
+$("p#my_paragraph").addClass("pretty");
 ```
 
 Removing a class is equally easy.
+
 ```javascript
-$("p#my_paragraph").removeClass('pretty');
+$("p#my_paragraph").removeClass("pretty");
 ```
 
 ---
@@ -353,9 +393,11 @@ template: content
 name: content-6
 
 ## Changing an attribute value
+
 Any attribute of any HTML element can have its value changed.
 
 For example, to change the source image used by an `img` element.
+
 ```javascript
 $("img#my_donkey").attr("src", "images/mule.jpg");
 ```
@@ -368,18 +410,23 @@ template: content
 name: content-7
 
 ## Animating an element
-Any element can be animated by transitioning from its current styles to a new style.  Animations can include transitions involving the dimension (`width` and `height`), position (`top` and `left`), or `opacity` (a number from 0 to 1)
+
+Any element can be animated by transitioning from its current styles to a new style. Animations can include transitions involving the dimension (`width` and `height`), position (`top` and `left`), or `opacity` (a number from 0 to 1)
 
 For example, to move an element to near the top left of the browser viewport while resizing it:
+
 ```javascript
 // first make sure the element can be positioned before trying to change its position
-$("img#donkey").css('position', 'absolute');
+$("img#donkey").css("position", "absolute");
 
 // now animate it!
-$("img#donkey").animate({
-    "top": "10px",
-    "left": "20px"
-}, 2000); // 2000 represents 2 seconds in milliseconds
+$("img#donkey").animate(
+  {
+    top: "10px",
+    left: "20px",
+  },
+  2000
+); // 2000 represents 2 seconds in milliseconds
 ```
 
 ---
@@ -393,5 +440,6 @@ name: conclusions
 template: conclusions
 name: conclusions-1
 
-At this point you have a solid understanding of the history and main uses of Javascript in general and JQuery in particular.  Now try it!
-- Thank you.  Bye.
+At this point you have a solid understanding of the history and main uses of Javascript in general and JQuery in particular. Now try it!
+
+- Thank you. Bye.

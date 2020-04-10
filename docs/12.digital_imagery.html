@@ -7,6 +7,7 @@ permalink: /digital-imagery/
 class: center, middle
 
 # Digital Imagery
+
 the practicality of producing images on and for a computer
 
 ---
@@ -27,6 +28,7 @@ name: overview
 --
 
 ## Concept
+
 The way in which a typical computer stores and manipulates image data is interesting from a conceptual standpoint as well as from a practical position.
 
 --
@@ -42,6 +44,7 @@ The way in which a typical computer stores and manipulates image data is interes
 template: overview
 
 ## Data structures
+
 When it comes to digital images, there are two categories of data structures that are used to represent the image data.
 
 --
@@ -71,6 +74,7 @@ name: raster
 template: raster
 
 ## Example
+
 Imagine an image of a simple rectangle:
 
 ![Rendered rectangle](../images/digital-imagery-rendered-rectangle.png)
@@ -100,6 +104,7 @@ name: raster-structure
 template: raster
 
 ## Digital cameras
+
 Digital cameras capture the amount of light falling onto a grid of light sensors behind the camera lens.
 
 --
@@ -115,6 +120,7 @@ Digital cameras capture the amount of light falling onto a grid of light sensors
 template: raster
 
 ## Computer displays
+
 Almost all computer displays today contain a grid of lamps that produce the image you see.
 
 --
@@ -134,11 +140,12 @@ Almost all computer displays today contain a grid of lamps that produce the imag
 template: raster
 
 ## Printed materials
+
 Computer printers, including dot matrix printers, inkjet printers, and laser printers, print image data to paper and other materials.
 
 --
 
-- The ink is printed to the paper in a dot matrix - a grid.  The printer head scans the page and places tiny droplets of ink (the **dots**) on the paper in a grid of rows and columns.
+- The ink is printed to the paper in a dot matrix - a grid. The printer head scans the page and places tiny droplets of ink (the **dots**) on the paper in a grid of rows and columns.
 
 --
 
@@ -153,6 +160,7 @@ Computer printers, including dot matrix printers, inkjet printers, and laser pri
 template: raster
 
 ## Features
+
 There are a few key features that influence the quality, display size, and file size of any raster image.
 
 --
@@ -172,19 +180,21 @@ There are a few key features that influence the quality, display size, and file 
 template: raster
 
 ## Attention to detail
+
 When shopping for a computer, you always see advertisements like this:
 
 ![False advertising of resolution](../images/digital-imagery-false-advertising.png)
 
 --
 
-- These are pixel dimensions, not resolution!  The field of marketing...
+- These are pixel dimensions, not resolution! The field of marketing...
 
 ---
 
 template: raster
 
 ## Compression formats
+
 When it comes to saving raster image data into a usable file, there are a few considerations.
 
 --
@@ -197,86 +207,90 @@ When it comes to saving raster image data into a usable file, there are a few co
 
 --
 
-- These two considerations are often [at loggerheads](https://www.merriam-webster.com/dictionary/loggerhead) with one another.  Usually, *a compromise must be found*.
+- These two considerations are often [at loggerheads](https://www.merriam-webster.com/dictionary/loggerhead) with one another. Usually, _a compromise must be found_.
 
 ---
 
 template: raster
 
 ## Compression formats
+
 A few popular raster image **compression algorithms** attempt to find the perfect balance between file size and fidelity...
 
 --
 
-- **GIF** - good for compressing the file sizes of *simple images with lots of solid color areas*, i.e. pixels whose color is similar to that of their neighboring pixels.
+- **GIF** - good for compressing the file sizes of _simple images with lots of solid color areas_, i.e. pixels whose color is similar to that of their neighboring pixels.
 
 --
 
-  - only supports up to 256 different colors (i.e., 8-bit color depth)
+- only supports up to 256 different colors (i.e., 8-bit color depth)
 
 --
 
-  - best for simple graphics like clip art, cartoons, diagrams, and other simple illustrations.
+- best for simple graphics like clip art, cartoons, diagrams, and other simple illustrations.
 
 --
 
-  - supports transparency
+- supports transparency
 
 --
 
-  - ... and animation
+- ... and animation
 
 ---
 
 template: raster
 
 ## Compression formats
+
 A few popular raster image **compression algorithms** attempt to find the perfect balance between file size and fidelity...
 
-- **JPG** - good for compressing the file sizes of *photorealistic images* where each pixel is likely to have a very different color from its neighboring pixels.
+- **JPG** - good for compressing the file sizes of _photorealistic images_ where each pixel is likely to have a very different color from its neighboring pixels.
 
 --
 
-  - supports millions of colors
+- supports millions of colors
 
 --
 
-  - best for photographs and illustrations with a high degree of variation in colors from pixel-to-pixel.
+- best for photographs and illustrations with a high degree of variation in colors from pixel-to-pixel.
 
 --
 
-  - cannot handle transparency
+- cannot handle transparency
 
 ---
 
 template: raster
 
 ## Compression formats
+
 A few popular raster image **compression algorithms** attempt to find the perfect balance between file size and fidelity...
 
-- **PNG** - good *general-purpose* compression for raster images of all types.
+- **PNG** - good _general-purpose_ compression for raster images of all types.
 
 --
 
-  - supports unlimited colors
+- supports unlimited colors
 
 --
 
-  - good for all kinds of images
+- good for all kinds of images
 
 --
 
-  - supports transparency
+- supports transparency
 
 --
 
-  - ... and animation (in theory, but not in practice - the web browsers do not currently support animated PNGs)
+- ... and animation (in theory, but not in practice - the web browsers do not currently support animated PNGs)
 
 ---
 
 template: raster
 
 ## Drawbacks
+
 While raster images lend themselves to digital cameras, computer displays, and printers, there are some reasons why they are not perfect for all images.
 
 --
@@ -285,7 +299,7 @@ While raster images lend themselves to digital cameras, computer displays, and p
 
 --
 
-- **Raster images do not retain any information about the shapes that the pixels represent**.  This makes modifying shapes in the image more difficult - they must be entirely redone from scratch, making raster images unsuitable for drafting illustrations or diagrams.
+- **Raster images do not retain any information about the shapes that the pixels represent**. This makes modifying shapes in the image more difficult - they must be entirely redone from scratch, making raster images unsuitable for drafting illustrations or diagrams.
 
 ---
 
@@ -298,6 +312,7 @@ name: vector
 template: vector
 
 ## Example
+
 Take the same image of the rectangle we saw earlier...
 
 ![Rendered rectangle](../images/digital-imagery-rendered-rectangle.png)
@@ -315,16 +330,18 @@ A **vector image** would store just the fact that there is a rectangular shape w
 name: vector-example-code
 
 - Here is one way of representing this vector shape data as text:
+
 ```html
-<rect class="cls-1" width="130" height="90"/>
+<rect class="cls-1" width="130" height="90" />
 ```
 
 --
 
 - And its associated styles:
+
 ```css
 <style>
-        .cls-1{ 
+        .cls-1{
                 fill: #f69799;
                 stroke: #b5739d;
                 stroke-width: 10px;
@@ -341,21 +358,23 @@ name: vector-example-code
 template: vector
 
 ## Benefits
+
 Vector imagery offers advantages in some use-cases, compared to raster imagery.
 
 --
 
-- **Enlarging a vector image does not result in any loss of quality**.  For example, we could simply adjust the `width` and `height` properties of the `rect` in the previous [example code](#vector-example-code).
+- **Enlarging a vector image does not result in any loss of quality**. For example, we could simply adjust the `width` and `height` properties of the `rect` in the previous [example code](#vector-example-code).
 
 --
 
-- **Vector images retain all information about the shapes and styles represented in the image**.  This makes modifying any shapes in the image as simple as tweaking its settings.
+- **Vector images retain all information about the shapes and styles represented in the image**. This makes modifying any shapes in the image as simple as tweaking its settings.
 
 ---
 
 template: vector
 
 ## Applications
+
 Vector images are widely used in specific contexts.
 
 --
@@ -375,15 +394,17 @@ Vector images are widely used in specific contexts.
 template: vector
 
 ## File formats
-There are many popular specialized vector image files for specific applications.  
+
+There are many popular specialized vector image files for specific applications.
 
 --
 
 - **Scalable Vector Graphics (SVG)** - simple text files that store vector data
+
   - written as plain text markup, similar to HTML
   - styled with CSS code
   - supported by most contemporary web browsers
-  
+
 ---
 
 name: conclusions
@@ -396,4 +417,4 @@ This presentation has hopefully given you a useful overview of image theory as i
 
 --
 
-- Thank you.  Bye.
+- Thank you. Bye.
