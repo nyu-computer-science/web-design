@@ -60,6 +60,18 @@ name: overview-2
 ---
 
 template: overview
+name: overview-2b
+
+## The browser wars
+
+Some additional resources about the browser wars, for those interested.
+
+- [The lore of the browser wars and the user-agent string](https://webaim.org/blog/user-agent-string-history/)
+- [A podcast episode about the browser wars on Spotify](https://open.spotify.com/episode/11ASgKaXAtHW2rmjwdJvdo?si=qDgb5hjbQqu1I4h5XcwgQA)
+
+---
+
+template: overview
 name: overview-3
 
 ## Neverending war
@@ -329,7 +341,7 @@ $("p#my_paragraph").text("Tri-tip prosciutto drumstick swine");
 You can alternatively write HTML that will be nested within the selected element
 
 ```javascript
-$("p#my_paragraph").text(
+$("p#my_paragraph").html(
   "<strong>Tri-tip <a href='http://nytimes.com'>prosciutto</a> drumstick swine"
 );
 ```
@@ -364,7 +376,7 @@ name: content-5
 
 ## Modifying an element's class
 
-It is possible to change an element's style by dynamically adding or removing a class to it, assuming those classes are selected by some CSS code that affects their styles.
+It is possible to change an element's style by dynamically adding or removing a class to it.
 
 For example, assume the following CSS code:
 
