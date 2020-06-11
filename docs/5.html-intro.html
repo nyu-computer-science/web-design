@@ -198,7 +198,7 @@ The `link` element informs the web browser of the existence of another file it s
 template: minimum
 name: minimum-8
 
-### body contents
+## body contents
 
 The contents of the `body` tag indicate the visible elements of the page.
 
@@ -331,9 +331,17 @@ So the following code is a valid HTML document:
 </html>
 ```
 
-So is this:
+---
+
+template: elements
+name: elements-5b
+
+## Tabs (continued)
+
+This is also valid HTML code:
 
 ```html
+<!-- prettier-ignore -->
 <!doctype html>
 
 <html
@@ -348,7 +356,7 @@ lang="en"><head                 ><meta          charset="utf-8" />
 template: elements
 name: elements-6
 
-## Tags (continued)
+## Tags (continued again)
 
 Don't do that! We want to be able to read and understand code easily.
 
@@ -359,16 +367,17 @@ Do this:
 
 ```html
 <article>
-  <img src="images/donkey.jpg" />
+  <a href="somepage.html">
+    <img src="images/donkey.jpg" />
+  </a>
 </article>
 ```
 
 Not this:
 
 ```html
-<article>
-  <img src="images/donkey.jpg" />
-</article>
+<!-- prettier-ignore -->
+<article><a href="somepage.html"><img src="images/donkey.jpg" /></a></article>
 ```
 
 ---
