@@ -100,6 +100,13 @@ A `link` element should be nested within the `head` element of your HTML documen
 </html>
 ```
 
+---
+
+template: setup
+name: setup-2b
+
+## External stylesheet file (continued)
+
 Now you can write CSS code into that separate file and it will be applied to the content in the HTML document.
 
 ```css
@@ -337,19 +344,20 @@ There are several properties related to color changes, including:
 - `background-color` - background color applied to the entire area of the selected element(s)
 - `border-color` - the color of any border applied to the selected element(s)
 
-````
+--
 
 Example:
+
 ```css
 footer {
-    color: black;
-    background-color: #c0c0c0;
-    border-color: blue;
-    /* the other two border-related properties are necessary to show a border */
-    border-width: 2px;
-    border-style: dotted;
+  color: black;
+  background-color: #c0c0c0;
+  border-color: blue;
+  /* the other two border-related properties are necessary to show a border */
+  border-width: 2px;
+  border-style: dotted;
 }
-````
+```
 
 ---
 
@@ -366,18 +374,19 @@ There are several properties related to text or font changes, including:
 - `text-decoration` - used to apply any `underline` or `overline` to the selected text
 - `font-weight` - whether text is `bold`, `normal`, or `light`
 
-````
+--
 
 Example:
+
 ```css
 p#first {
-    color: purple;
-    font-family: helvetica;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: underline;
+  color: purple;
+  font-family: helvetica;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
 }
-````
+```
 
 ---
 
@@ -393,17 +402,18 @@ There are a few properties related to text or font changes, including:
 - `margin` - the spacing _external_ to an element
 - `padding` - the spacing _internal_ to an element
 
-````
+--
 
 Example:
+
 ```css
 aside {
-    margin: 10px;
-    padding: 20px;
-    width: 400px;
-    height: 600px; /* as a general rule, don't set the height of an element like this... let the height auto-adjust to fit the content within the element */
+  margin: 10px;
+  padding: 20px;
+  width: 400px;
+  height: 600px; /* as a general rule, don't set the height of an element like this... let the height auto-adjust to fit the content within the element */
 }
-````
+```
 
 ---
 
