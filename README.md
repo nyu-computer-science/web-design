@@ -8,6 +8,6 @@ Slides are auto-generated from the materials in the `docs` folder using Git Page
 
 ## Running locally
 
-- Install Jekyll globally
+- Install [Jekyll](https://jekyllrb.com/) globally
 - `cd` into the `docs` directory
 - run `jekyll serve`
