@@ -20,6 +20,7 @@ facilitating the control the content of web pages
 1. [Elements & Tags](#elements)
 1. [Attributes](#attributes)
 1. [Common Tags](#common)
+1. [Try It Out](#try)
 1. [Conclusions](#conclusions)
 
 ---
@@ -565,6 +566,72 @@ name: common-6
 Obviously you will want to see more information on using these in a practical sense.
 
 - Check out the [w3schools.com HTML tutorials](https://www.w3schools.com/html/).
+
+---
+
+name: try
+
+# Try It Out
+
+--
+
+## Concept
+
+The best way to learn to make web pages is to try. There are many ways to write code for a web page and open it in a web browser to see what it looks like.
+
+--
+
+- by directly opening an HTML code file in your web browser
+
+--
+
+- by running web server software on your own computer
+
+---
+
+name: try
+
+## Directly open an HTML code file in your web browser
+
+This is the simplest way to test out a web page that you have been developing.
+
+--
+
+- Write the HTML and CSS code in a decent code editor. Save the HTML code into a file with the `.html` extension, the CSS code in a file with the `.css` extension, and any Javascript code in a file with the `.js` extension.
+
+--
+
+- Ensure that your HTML code [refers to the CSS file](#minimum-7) and any Javascript code files appropriately.
+
+--
+
+- Open your favorite web browser and use the `File`->`Open` menu option to open the HTML file you created.
+
+---
+
+name: try
+
+## Run a web server on your own computer
+
+Having a web server serve your web pages is a more "realistic" environment within which to test your pages, and it is easy to set up on your own machine.
+
+--
+
+- [download and install Node.js](https://nodejs.org/en/download/)
+
+--
+
+- from the command line, run the command `npm install --global http-server` to install a simple web server (note that Mac/Unix/Linux users may have to run `sudo npm install --global http-server` to install with superuser privileges)
+
+--
+
+- from the command line, start the web server from within the same directory where the web pages files reside: `http-server ./` - this should output a URL at which to view your web site.
+
+--
+
+- copy/paste the URL into a web browser to view the web pages.
+
+--
 
 ---
 
